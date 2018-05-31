@@ -25,7 +25,7 @@ class MatryoshkaServiceProvider extends ServiceProvider
             if ($version[1] > 2) {
                 return "<?php if (! app('Laracasts\Matryoshka\BladeDirective')->setUp({$expression})) : ?>";
             }
-            return "<?php if (! app('Laracasts\Matryoshka\BladeDirective')->setUp{$expression}) : ?>";
+            return "<?php if (! app('Laracasts\Matryoshka\BladeDirective')->setUp({$expression})) : ?>";
         });
 
         Blade::directive('endcache', function () {
